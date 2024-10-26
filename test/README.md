@@ -11,3 +11,9 @@ time build/bin/minivm test/fib/fib.lua 40
 time luajit -joff test/fib/fib.lua 40
 
 > 4.5s
+
+make -Bj OPT='-O3 -flto'
+
+time build/bin/minivm test/fib/fib.lua 40
+
+> 9.5s
